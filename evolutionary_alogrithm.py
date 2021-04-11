@@ -13,14 +13,14 @@ class Population:
         self.fitness = fitness
         self.population = [Individual() for _ in range(population_size)]
 
-    def proceed(self, n_children): # Hier wird die Fitness berechnet und die offsprings generiert
-        VARIABLES.generation += 1 # Um die Generationen zu zählen
-        for individual in self.population: # alle Individien werden zurückgesetzt
+    def proceed(self, n_children):
+        VARIABLES.generation += 1 
+        for individual in self.population:
             individual.reset()
-        run_simulation(self.population)# Die Fittness wird berechnet siehe enviroment.py
-        fitnesslist = softmax(np.asarray([individual.score for individual in self.population])) # Alle Values werden normalized um als warscheindlichkeiten benutzt werden zu können
-
-        if VARIABLES.crossover_active:#mit Crossover
+        run_simulation(self.population)
+        fitnesslist = softmax(np.asarray([individual.score for individual in self.population]))
+        
+        if VARIABLES.crossover_active:
             weights = [
                 random.choices(self.population, fitnesslist)[0].pair(random.choices(self.population, fitnesslist)[0])
                 for _ in range(int(n_children / 2))]
