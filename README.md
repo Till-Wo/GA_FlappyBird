@@ -19,6 +19,3 @@ To start the program just run "python main.py" in the project directory.
 
 ## Author
 Till Wollenmann
-
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
