@@ -29,7 +29,7 @@ class Population:
                         random.choices(self.population, fitnesslist)[0].NN.get_flatted()) for _ in
                        range(int(n_children / 2))]
 
-        self.population.sort(key=lambda x: x.score) # Die Population wird sortiert. Vorsicht erst nach gebrauch der fitnesslist
+        self.population.sort(key=lambda x: x.score)
 
         for i, weight_tuple in enumerate(weights):
             # neue gewichte werden gesetzt
