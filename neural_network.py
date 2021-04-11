@@ -4,7 +4,7 @@ import random
 biases_active = False
 
 
-def sigmoid(X):  # Wichtig nochmal anschauen da ich die Fktion noch nicht ganz verstehe
+def sigmoid(X):
     return 1 / (1 + np.exp([-x for x in X]))
 
 
