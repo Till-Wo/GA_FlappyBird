@@ -6,8 +6,8 @@ This is a part of a bigger project were I'm writing a small paper.
 ## Installation
 
 I'll make this as short as possible....To be able to run the main.py file you'll need:
--- pygame
--- numpy
+- pygame
+- numpy
 
 And that should be about it.
 
